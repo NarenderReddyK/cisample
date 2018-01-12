@@ -2,7 +2,7 @@
 
 if [ "$APPCENTER_BRANCH" == "master" ];
 then
-    ./gradlew publishApkRelease
+    ../gradlew publishApkRelease
 else
 	cd ../CITest
 	mvn -DskipTests -P prepare-for-upload package
