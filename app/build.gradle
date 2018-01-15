@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.github.triplet.play'
 
 // Create a variable called keystorePropertiesFile, and initialize it to your
 // keystore.properties file, in the rootProject folder.
@@ -20,11 +19,6 @@ android {
 //            storePassword keystoreProperties['storePassword']
 //        }
 //    }
-    playAccountConfigs {
-        defaultAccountConfig {
-            jsonFile = file('Google Play Android Developer-a01dc03b2405.json')
-        }
-    }
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
@@ -34,7 +28,6 @@ android {
         versionCode 7
         versionName "1.0.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
     buildTypes {
         release {
