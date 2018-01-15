@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+task BasicUploadApk(type: JavaExec) {
+    main = "com.google.play.developerapi.samples.BasicUploadApk"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task UploadApkWithListing(type: JavaExec) {
+    main = "com.google.play.developerapi.samples.UploadApkWithListing"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+dependencies {
+    compile 'com.google.apis:google-api-services-androidpublisher:v2-rev50-1.23.0'
+    compile 'com.google.oauth-client:google-oauth-client-java6:1.23.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+}
