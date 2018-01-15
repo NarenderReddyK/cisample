@@ -2,10 +2,10 @@
 
 if [ "$APPCENTER_BRANCH" == "master" ];
 then
-	cp build/outputs/apk/app-release.apk ../gplay-publisher/src/main/resources/
-	cd ../gplay-publisher
-    ./gradlew build
-    ./gradlew UploadApkWithListing
+	# cp build/outputs/apk/app-release.apk ../gplay-publisher/src/main/resources/
+# 	cd ../gplay-publisher
+#     ./gradlew build
+#     ./gradlew UploadApkWithListing
 else
 	cd ../CITest
 	mvn -DskipTests -P prepare-for-upload package
