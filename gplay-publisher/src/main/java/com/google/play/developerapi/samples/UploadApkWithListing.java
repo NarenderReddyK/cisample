@@ -127,6 +127,7 @@ public class UploadApkWithListing {
             log.error(
                     "Exception was thrown while uploading apk and updating recent changes",
                     ex);
+            System.exit(1);
         }
     }
 
